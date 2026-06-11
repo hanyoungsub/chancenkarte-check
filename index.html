@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chancenkarte Points Calculator 2026 | Germany Opportunity Card Self-Check</title>
+  <meta name="description" content="Check if you reach the 6 points for Germany's Opportunity Card (Chancenkarte) — qualification recognition, experience, German/English levels, age, and ties to Germany. Free, instant, English & Deutsch." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://chancenkarte-check.pages.dev/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Chancenkarte Points Calculator — Germany Opportunity Card" />
+  <meta property="og:description" content="Score yourself against the official 6-point system for Germany's job seeker visa." />
+  <meta property="og:url" content="https://chancenkarte-check.pages.dev/" />
+  <meta property="og:locale" content="en_DE" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chancenkarte Points Calculator" />
+  <meta name="twitter:description" content="Germany Opportunity Card 6-point self-check. English & Deutsch." />
+
+  <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;🇩🇪&lt;/text&gt;&lt;/svg&gt;" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3121045082775003" crossorigin="anonymous"></script>
+
+  <!-- Google Analytics 4 : 측정ID 발급 후 교체 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Chancenkarte Points Calculator",
+    "url": "https://chancenkarte-check.pages.dev/",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "inLanguage": ["en", "de"],
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many points do I need for the German Opportunity Card?",
+        "acceptedAnswer": { "@type": "Answer", "text": "If your degree or vocational qualification is fully recognized in Germany, you qualify directly without points. Otherwise you need at least 6 points across qualification recognition (4), work experience (2–3), German language (1–3), English C1 (1), age (1–2), previous stays in Germany (1), and spouse co-application (1)." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does English B2 earn points for the Chancenkarte?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. English B2 (or German A1) only satisfies the basic language requirement and earns zero points. Points start at English C1 (1 point) or German A2 (1 point), with German B1 worth 2 and B2 or higher worth 3." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much money do I need to show for the Opportunity Card?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You must prove roughly €1,091 per month — about €13,092 for a full year — typically via a blocked account, or alternatively a part-time employment contract (up to 20 hours/week) in Germany." }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    * { font-family: 'Inter', sans-serif; }
+    .result-pass { background: linear-gradient(135deg, #1c1917 0%, #44403c 55%, #d4a017 130%); }
+    .result-direct { background: linear-gradient(135deg, #14532d 0%, #166534 55%, #22c55e 130%); }
+    .result-fail { background: linear-gradient(135deg, #44403c 0%, #57534e 60%, #78716c 100%); }
+    .amount-display { font-feature-settings: "tnum"; font-variant-numeric: tabular-nums; }
+    .sel { width:100%; border:1px solid #e2e8f0; border-radius:12px; padding:11px 12px; font-size:14px; color:#0f172a; background:#f8fafc; transition:border-color .15s, box-shadow .15s; }
+    .sel:focus { outline:none; border-color:#b45309; box-shadow:0 0 0 3px rgba(180,83,9,.1); }
+    .seg { display:flex; gap:8px; flex-wrap:wrap; }
+    .seg button { flex:1; min-width:110px; border:1px solid #e2e8f0; border-radius:12px; padding:11px 8px; font-size:13.5px; font-weight:600; color:#475569; background:#fff; cursor:pointer; transition:all .15s; }
+    .seg button:hover { border-color:#b45309; }
+    .seg button.on { border-color:#b45309; background:#fffbeb; color:#92400e; }
+    .step-badge { width:24px; height:24px; background:#fef3c7; color:#92400e; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; flex-shrink:0; }
+    .adsense-slot { background:#f8fafc; border:1.5px dashed #cbd5e1; border-radius:12px; display:flex; align-items:center; justify-content:center; color:#94a3b8; font-size:13px; letter-spacing:.05em; }
+    .affiliate-slot { background:#fffbeb; border:1.5px dashed #fbbf24; border-radius:12px; color:#b45309; font-size:13px; text-align:center; padding:14px; }
+    .acc { background:#fff; border:1px solid #f1f5f9; border-radius:16px; box-shadow:0 1px 2px rgba(0,0,0,.03); overflow:hidden; }
+    .acc > summary { list-style:none; cursor:pointer; padding:16px 20px; font-size:15px; font-weight:700; color:#0f172a; display:flex; align-items:center; justify-content:space-between; user-select:none; }
+    .acc > summary::-webkit-details-marker { display:none; }
+    .acc > summary .chev { width:18px; height:18px; color:#94a3b8; transition:transform .2s; flex-shrink:0; }
+    .acc[open] > summary .chev { transform:rotate(180deg); }
+    .acc > summary:hover { background:#f8fafc; }
+    .acc .acc-body { padding:0 20px 20px; }
+    .lbl { font-size:12px; font-weight:600; color:#64748b; display:block; margin-bottom:6px; }
+    #langToggle { display:inline-flex; border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; }
+    #langToggle button { padding:6px 14px; font-size:12px; font-weight:700; color:#64748b; background:#fff; cursor:pointer; border:none; }
+    #langToggle button.on { background:#1c1917; color:#fbbf24; }
+    #feedbackToggle { position:fixed; bottom:24px; right:0; z-index:50; writing-mode:vertical-rl; background:#b45309; color:#fff; font-size:12px; font-weight:600; padding:12px 6px; border-radius:8px 0 0 8px; cursor:pointer; letter-spacing:.08em; box-shadow:-2px 2px 8px rgba(0,0,0,.15); }
+    #feedbackToggle:hover { background:#92400e; }
+    #feedbackPanel { position:fixed; bottom:0; right:-360px; width:340px; max-height:85vh; background:#fff; border-radius:16px 0 0 0; box-shadow:-4px 0 24px rgba(0,0,0,.12); z-index:49; transition:right .3s; overflow-y:auto; padding:20px; }
+    #feedbackPanel.open { right:0; }
+    .fb-input { width:100%; border:1px solid #e2e8f0; border-radius:10px; padding:10px 12px; font-size:13px; background:#f8fafc; }
+    .fb-input:focus { outline:none; border-color:#b45309; }
+    .fb-btn { width:100%; background:#b45309; color:#fff; font-size:13px; font-weight:600; padding:10px; border-radius:10px; border:none; cursor:pointer; margin-top:10px; }
+    .fb-btn:disabled { background:#fcd34d; }
+    #fbSuccess { display:none; text-align:center; color:#b45309; font-size:13px; margin-top:8px; }
+  </style>
+</head>
+<body class="bg-slate-50 min-h-screen">
+
+  <!-- AdSense Space: TOP -->
+  <div class="w-full max-w-2xl mx-auto px-4 pt-5">
+    <!-- AdSense Space -->
+    <div class="adsense-slot h-20 mb-2">Ad Space (728×90)</div>
+  </div>
+
+  <main class="w-full max-w-2xl mx-auto px-4 py-6">
+
+    <div class="mb-7">
+      <div class="flex items-center justify-between mb-3">
+        <div class="inline-flex items-center gap-2 bg-amber-50 text-amber-800 text-xs font-medium px-3 py-1 rounded-full">
+          🇩🇪 <span data-i18n="badge">Official 6-point system</span> · §20a AufenthG · <span id="badgeYear"></span>
+        </div>
+        <div id="langToggle">
+          <button data-lang="en" class="on">EN</button>
+          <button data-lang="de">DE</button>
+        </div>
+      </div>
+      <h1 class="text-2xl font-bold text-slate-900 leading-tight" data-i18n="title">Chancenkarte Points Calculator</h1>
+      <p class="text-sm text-slate-500 mt-2" data-i18n="subtitle">Check whether you reach the 6 points for Germany's Opportunity Card — or qualify directly without points.</p>
+    </div>
+
+    <!-- Input -->
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 mb-4 space-y-7">
+
+      <div>
+        <div class="flex items-center gap-2 mb-3"><div class="step-badge">1</div><span class="text-sm font-semibold text-slate-700" data-i18n="q1">Is your degree or vocational qualification fully recognized in Germany (or obtained in Germany)?</span></div>
+        <div class="seg" id="recogSeg">
+          <button data-v="full" data-i18n="q1_full">Yes — fully recognized</button>
+          <button data-v="partial" data-i18n="q1_partial">Partially recognized</button>
+          <button data-v="no" class="on" data-i18n="q1_no">No / not checked</button>
+        </div>
+        <p class="text-xs text-slate-400 mt-1.5" data-i18n="q1_hint">Fully recognized = you qualify as a skilled worker directly, no points needed. Check via the "Anabin" database or a recognition procedure.</p>
+      </div>
+
+      <div>
+        <div class="flex items-center gap-2 mb-3"><div class="step-badge">2</div><span class="text-sm font-semibold text-slate-700" data-i18n="q2">Basic requirements — do you have BOTH: ① 2+ years of vocational training or a university degree (recognized in its country), and ② German A1 or English B2?</span></div>
+        <div class="seg" id="basicSeg">
+          <button data-v="yes" data-i18n="yes">Yes</button>
+          <button data-v="no" class="on" data-i18n="no">No</button>
+        </div>
+        <p class="text-xs text-slate-400 mt-1.5" data-i18n="q2_hint">These are entry conditions and earn no points. Without both, the points route is closed.</p>
+      </div>
+
+      <div>
+        <div class="flex items-center gap-2 mb-3"><div class="step-badge">3</div><span class="text-sm font-semibold text-slate-700" data-i18n="q3">Work experience related to your qualification</span></div>
+        <select id="exp" class="sel">
+          <option value="0" data-i18n="exp0">Less than 2 years</option>
+          <option value="2" data-i18n="exp2">2+ years within the last 5 years</option>
+          <option value="3" data-i18n="exp3">3+ years within the last 7 years</option>
+        </select>
+      </div>
+
+      <div>
+        <div class="flex items-center gap-2 mb-3"><div class="step-badge">4</div><span class="text-sm font-semibold text-slate-700" data-i18n="q4">Language skills</span></div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="lbl" data-i18n="q4_de">German level</label>
+            <select id="german" class="sel">
+              <option value="0" data-i18n="de_none">None or A1</option>
+              <option value="1">A2</option>
+              <option value="2">B1</option>
+              <option value="3" data-i18n="de_b2">B2 or higher</option>
+            </select>
+          </div>
+          <div>
+            <label class="lbl" data-i18n="q4_en">English C1 or native?</label>
+            <select id="english" class="sel">
+              <option value="0" data-i18n="no">No</option>
+              <option value="1" data-i18n="yes">Yes</option>
+            </select>
+          </div>
+        </div>
+        <p class="text-xs text-slate-400 mt-1.5" data-i18n="q4_hint">English B2 satisfies the basic requirement but earns 0 points — points start at C1.</p>
+      </div>
+
+      <div>
+        <div class="flex items-center gap-2 mb-3"><div class="step-badge">5</div><span class="text-sm font-semibold text-slate-700" data-i18n="q5">Your age</span></div>
+        <select id="age" class="sel">
+          <option value="2" data-i18n="age35">35 or younger</option>
+          <option value="1" data-i18n="age40">36 – 40</option>
+          <option value="0" data-i18n="age41">41 or older</option>
+        </select>
+      </div>
+
+      <div>
+        <div class="flex items-center gap-2 mb-3"><div class="step-badge">6</div><span class="text-sm font-semibold text-slate-700" data-i18n="q6">Bonus points</span></div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div>
+            <label class="lbl" data-i18n="q6_stay">6+ months legally in Germany (last 5 yrs, not tourism)?</label>
+            <select id="stay" class="sel">
+              <option value="0" data-i18n="no">No</option>
+              <option value="1" data-i18n="yes">Yes</option>
+            </select>
+          </div>
+          <div>
+            <label class="lbl" data-i18n="q6_shortage">Qualification in a German shortage occupation?</label>
+            <select id="shortage" class="sel">
+              <option value="0" data-i18n="no">No / not sure</option>
+              <option value="1" data-i18n="yes">Yes</option>
+            </select>
+          </div>
+          <div>
+            <label class="lbl" data-i18n="q6_spouse">Applying together with your spouse?</label>
+            <select id="spouse" class="sel">
+              <option value="0" data-i18n="no">No</option>
+              <option value="1" data-i18n="yes">Yes</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Result -->
+    <div id="resultCard" class="rounded-2xl p-6 mb-4 opacity-0 transition-opacity duration-300">
+      <p class="text-white/80 text-sm font-medium mb-1" data-i18n="result_label">Your Chancenkarte check</p>
+      <div class="flex items-end gap-2">
+        <span id="resultStatus" class="amount-display text-white text-3xl font-extrabold leading-none">—</span>
+      </div>
+      <p id="resultSub" class="text-white/85 text-xs mt-3"></p>
+    </div>
+
+    <!-- Breakdown -->
+    <div id="infoCard" class="bg-white rounded-2xl border border-slate-100 shadow-sm p-5 mb-4 hidden">
+      <h2 class="text-sm font-semibold text-slate-700 mb-3" data-i18n="breakdown">Points breakdown</h2>
+      <div class="space-y-2 text-sm" id="infoBody"></div>
+    </div>
+
+    <!-- Affiliate -->
+    <div id="affPass" class="affiliate-slot mb-4 hidden">
+      <!-- AFFILIATE_PASS_START -->
+      <p class="font-semibold mb-1">✅ <span data-i18n="aff_pass_t">You appear to qualify</span></p>
+      <p class="text-xs" data-i18n="aff_pass_b">Next steps: blocked account, health insurance, and the embassy appointment. A relocation service or immigration adviser can bundle these and avoid the common document rejections. [Affiliate link: Germany relocation / blocked account]</p>
+      <!-- AFFILIATE_PASS_END -->
+    </div>
+    <div id="affFail" class="affiliate-slot mb-4 hidden">
+      <!-- AFFILIATE_FAIL_START -->
+      <p class="font-semibold mb-1">📋 <span data-i18n="aff_fail_t">Not at 6 points yet — but the gap may be closable</span></p>
+      <p class="text-xs" data-i18n="aff_fail_b">A German A2 certificate (1–3 points) or a partial recognition procedure (4 points) are the fastest levers. An adviser can map your quickest route. [Affiliate link: German course / recognition service]</p>
+      <!-- AFFILIATE_FAIL_END -->
+    </div>
+
+    <!-- Notes -->
+    <div class="bg-amber-50 border border-amber-100 rounded-2xl p-5 mb-4">
+      <h2 class="text-sm font-semibold text-amber-800 mb-2" data-i18n="notes_t">Before you rely on this result</h2>
+      <ul class="text-xs text-amber-700 space-y-1.5 leading-relaxed list-disc pl-4">
+        <li data-i18n="note1">You must also prove funds of about €1,091/month (≈ €13,092/year), usually via a blocked account, or a part-time job contract (max 20 hrs/week).</li>
+        <li data-i18n="note2">Language certificates must come from approved providers (e.g. Goethe, telc, TestDaF for German; IELTS/TOEFL for English).</li>
+        <li data-i18n="note3">The card allows up to 12 months of job search, 20 hrs/week part-time work, and 2-week trial jobs — but no freelancing.</li>
+        <li data-i18n="note4">Applicants over 45 taking up work later face an additional income/pension requirement.</li>
+      </ul>
+    </div>
+
+    <!-- Explanatory content (영어 고정 - 타깃층 영어 가능) -->
+    <article class="space-y-3">
+
+      <details class="acc">
+        <summary>How the two routes work<svg class="chev" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary>
+        <div class="acc-body">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
+            <div class="bg-green-50 rounded-xl p-4">
+              <h3 class="text-sm font-semibold text-green-800 mb-1">Route 1 — Skilled worker (no points)</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">Your degree or vocational training is from Germany, or fully recognized as equivalent. You only need the financial proof — the points system doesn't apply to you.</p>
+            </div>
+            <div class="bg-amber-50 rounded-xl p-4">
+              <h3 class="text-sm font-semibold text-amber-800 mb-1">Route 2 — Points system (6+ points)</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">Qualification not (yet) fully recognized: meet the basic requirements, then score 6 points from recognition, experience, language, age, ties to Germany, and spouse.</p>
+            </div>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed">The Opportunity Card (§20a Residence Act, introduced June 2024) gives you up to 12 months in Germany to find qualified work — no job offer needed upfront. Once hired, you switch to a work permit, EU Blue Card, or later permanent residence.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>The full points table<svg class="chev" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary>
+        <div class="acc-body">
+          <div class="overflow-x-auto">
+            <table class="text-xs text-slate-600 w-full border-collapse">
+              <thead><tr class="bg-slate-50 text-slate-700"><th class="p-2 text-left font-semibold">Criterion</th><th class="p-2 text-left">Points</th></tr></thead>
+              <tbody>
+                <tr class="border-b border-slate-50"><td class="p-2">Partial recognition of qualification / permission for regulated profession</td><td class="p-2 font-semibold">4</td></tr>
+                <tr class="border-b border-slate-50"><td class="p-2">Work experience: 2 yrs (last 5) / 3 yrs (last 7)</td><td class="p-2 font-semibold">2 / 3</td></tr>
+                <tr class="border-b border-slate-50"><td class="p-2">German: A2 / B1 / B2+</td><td class="p-2 font-semibold">1 / 2 / 3</td></tr>
+                <tr class="border-b border-slate-50"><td class="p-2">English C1 or native (additional)</td><td class="p-2 font-semibold">1</td></tr>
+                <tr class="border-b border-slate-50"><td class="p-2">Age: ≤35 / 36–40</td><td class="p-2 font-semibold">2 / 1</td></tr>
+                <tr class="border-b border-slate-50"><td class="p-2">6+ months legal stay in Germany (last 5 yrs, not tourism)</td><td class="p-2 font-semibold">1</td></tr>
+                <tr class="border-b border-slate-50"><td class="p-2">Qualification in a shortage occupation</td><td class="p-2 font-semibold">1</td></tr>
+                <tr><td class="p-2">Spouse applying together</td><td class="p-2 font-semibold">1</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-xs text-slate-500 leading-relaxed mt-3">Basic requirements (2-year vocational training or degree + German A1 or English B2 + funds) earn no points — they're the entry ticket to the points route.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary>Frequently asked questions<svg class="chev" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary>
+        <div class="acc-body">
+          <div class="space-y-4">
+            <div><h3 class="text-sm font-semibold text-slate-800 mb-1">Q. Do I need a job offer to apply?</h3><p class="text-sm text-slate-600 leading-relaxed">A. No — that's the point of the card. You get up to 12 months in Germany to search, with part-time work (20 hrs/week) and unlimited 2-week trial jobs allowed.</p></div>
+            <div><h3 class="text-sm font-semibold text-slate-800 mb-1">Q. What counts as a "previous stay" in Germany?</h3><p class="text-sm text-slate-600 leading-relaxed">A. At least 6 continuous months of legal residence in the last 5 years — study, work, or language courses count. Tourist stays don't.</p></div>
+            <div><h3 class="text-sm font-semibold text-slate-800 mb-1">Q. My spouse and I both want to go. Does that help?</h3><p class="text-sm text-slate-600 leading-relaxed">A. If your spouse is also eligible and you apply together, each of you earns 1 extra point. Note the card itself doesn't include family reunification — each adult needs their own permit.</p></div>
+            <div><h3 class="text-sm font-semibold text-slate-800 mb-1">Q. What happens after I find a job?</h3><p class="text-sm text-slate-600 leading-relaxed">A. You switch to a skilled worker permit or EU Blue Card. If you have a qualified job but don't yet meet another permit's requirements, the Opportunity Card can be extended up to 2 more years.</p></div>
+            <div><h3 class="text-sm font-semibold text-slate-800 mb-1">Q. Is this the same as the official Self-Check?</h3><p class="text-sm text-slate-600 leading-relaxed">A. It follows the same published criteria. The official Self-Check on the Make it in Germany portal and the consular portal govern in case of any discrepancy — use this tool for quick planning.</p></div>
+          </div>
+        </div>
+      </details>
+
+      <p class="text-xs text-slate-400 leading-relaxed px-2 pt-1">
+        Sources: German Federal Foreign Office consular services portal (digital.diplo.de), Make it in Germany, §20a Aufenthaltsgesetz. This calculator provides an estimate only and is not legal advice. Verify with the official Self-Check and consult the German embassy or a qualified adviser.
+      </p>
+
+    </article>
+
+  </main>
+
+  <!-- AdSense Space: BOTTOM -->
+  <div class="w-full max-w-2xl mx-auto px-4 pb-8">
+    <!-- AdSense Space -->
+    <div class="adsense-slot h-24">Ad Space (336×280)</div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w-full max-w-2xl mx-auto px-4 pb-16">
+    <div class="space-y-3">
+      <details class="acc">
+        <summary>Privacy Policy<svg class="chev" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary>
+        <div class="acc-body text-xs text-slate-500 leading-relaxed space-y-2">
+          <p>This site uses Google Analytics to understand how visitors use the calculator. Google Analytics collects anonymous traffic data using cookies. No personally identifiable information is collected. You can disable cookies in your browser settings.</p>
+          <p>This site displays ads served by third-party advertising networks (including Google AdSense). Ad providers may use cookies to show ads based on your interests. You can manage ad personalisation through Google's Ads Settings.</p>
+          <p>All values you enter are processed entirely in your browser. Nothing you type is transmitted to or stored on any server.</p>
+          <p>Messages sent through the "Report an issue" form are used solely to improve this site.</p>
+        </div>
+      </details>
+      <details class="acc">
+        <summary>Disclaimer<svg class="chev" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary>
+        <div class="acc-body text-xs text-slate-500 leading-relaxed space-y-2">
+          <p>This calculator provides an estimate based on the published Opportunity Card criteria. It is for informational purposes only and does not constitute immigration or legal advice.</p>
+          <p>Eligibility decisions are made solely by German missions and authorities. Always verify with the official Self-Check and the German embassy responsible for you.</p>
+          <p>Some links on this site may be affiliate links. If you use them, we may earn a commission at no extra cost to you. This never affects the results.</p>
+          <p>The operator of this site accepts no liability for decisions made based on the information provided here.</p>
+        </div>
+      </details>
+      <details class="acc">
+        <summary>About / Contact<svg class="chev" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></summary>
+        <div class="acc-body text-xs text-slate-500 leading-relaxed space-y-2">
+          <p>This is an independent, individually-operated tool built to help non-EU professionals check their Chancenkarte points quickly, in English and German.</p>
+          <p>Found an error or have a suggestion? Use the "Report an issue" button on the right edge of the screen.</p>
+        </div>
+      </details>
+      <p class="text-center text-xs text-slate-400 pt-2">© <span id="footerYear"></span> Chancenkarte Points Calculator</p>
+    </div>
+  </footer>
+
+  <div id="feedbackToggle" onclick="toggleFeedback()">Report an issue</div>
+  <div id="feedbackPanel">
+    <div class="flex items-center justify-between mb-4">
+      <h3 class="text-sm font-bold text-slate-800">Report an issue</h3>
+      <button onclick="toggleFeedback()" class="text-slate-400 hover:text-slate-600 text-lg leading-none">✕</button>
+    </div>
+    <p class="text-xs text-slate-500 mb-4">Spotted an error or an outdated rule? Let us know — every report is reviewed.</p>
+    <div class="mb-3"><label class="lbl">Type</label>
+      <select id="fbType" class="fb-input">
+        <option value="calculation">Result seems wrong</option>
+        <option value="rule-change">A rule has changed</option>
+        <option value="wording">Wording unclear</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <div class="mb-3"><label class="lbl">Details (optional)</label><textarea id="fbText" class="fb-input" rows="4"></textarea></div>
+    <div class="mb-3"><label class="lbl">Email (if you'd like a reply)</label><input id="fbEmail" type="email" class="fb-input" /></div>
+    <button class="fb-btn" id="fbSubmitBtn" onclick="submitFeedback()">Send</button>
+    <div id="fbSuccess">✓ Sent. Thank you.</div>
+  </div>
+
+  <script>
+  /* CONFIG_START */
+  const POLICY_CONFIG = {
+    "pointsRequired": 6,
+    "partialRecognition": 4,
+    "shortageOccupation": 1,
+    "experience": { "0": 0, "2": 2, "3": 3 },
+    "german": { "0": 0, "1": 1, "2": 2, "3": 3 },
+    "englishC1": 1,
+    "age": { "2": 2, "1": 1, "0": 0 },
+    "stay": 1,
+    "spouse": 1,
+    "fundsMonthlyEUR": 1091,
+    "fundsYearlyEUR": 13092
+  };
+  /* CONFIG_END */
+
+  /* I18N_START : 핵심 UI 문구 (영/독) */
+  const I18N = {
+    en: {
+      badge: "Official 6-point system", title: "Chancenkarte Points Calculator",
+      subtitle: "Check whether you reach the 6 points for Germany's Opportunity Card — or qualify directly without points.",
+      q1: "Is your degree or vocational qualification fully recognized in Germany (or obtained in Germany)?",
+      q1_full: "Yes — fully recognized", q1_partial: "Partially recognized", q1_no: "No / not checked",
+      q1_hint: "Fully recognized = you qualify as a skilled worker directly, no points needed. Check via the \"Anabin\" database or a recognition procedure.",
+      q2: "Basic requirements — do you have BOTH: ① 2+ years of vocational training or a university degree (recognized in its country), and ② German A1 or English B2?",
+      q2_hint: "These are entry conditions and earn no points. Without both, the points route is closed.",
+      q3: "Work experience related to your qualification",
+      exp0: "Less than 2 years", exp2: "2+ years within the last 5 years", exp3: "3+ years within the last 7 years",
+      q4: "Language skills", q4_de: "German level", q4_en: "English C1 or native?", de_none: "None or A1", de_b2: "B2 or higher",
+      q4_hint: "English B2 satisfies the basic requirement but earns 0 points — points start at C1.",
+      q5: "Your age", age35: "35 or younger", age40: "36 – 40", age41: "41 or older",
+      q6: "Bonus points", q6_stay: "6+ months legally in Germany (last 5 yrs, not tourism)?",
+      q6_shortage: "Qualification in a German shortage occupation?", q6_spouse: "Applying together with your spouse?",
+      yes: "Yes", no: "No",
+      result_label: "Your Chancenkarte check", breakdown: "Points breakdown",
+      r_direct: "Eligible — skilled worker route", r_pass: "Eligible — {p} / 6 points", r_fail: "Not yet — {p} / 6 points", r_nobasic: "Basic requirements not met",
+      r_direct_sub: "Your qualification is fully recognized, so the points system doesn't apply — you only need financial proof (≈ €1,091/month) and health insurance.",
+      r_pass_sub: "You reach the 6-point threshold. Remaining steps: financial proof (≈ €13,092/year via blocked account or part-time contract), health insurance, embassy appointment.",
+      r_fail_sub: "You need {n} more point(s). Fastest levers: German A2–B2 (1–3 pts), partial recognition procedure (4 pts), or documenting more work experience.",
+      r_nobasic_sub: "The points route requires ① a 2-year vocational qualification or degree recognized in its country AND ② German A1 or English B2. Without these, points don't matter yet.",
+      b_recog: "Partial recognition", b_exp: "Work experience", b_de: "German", b_en: "English C1+", b_age: "Age", b_stay: "Stay in Germany", b_short: "Shortage occupation", b_spouse: "Spouse", b_total: "Total",
+      aff_pass_t: "You appear to qualify",
+      aff_pass_b: "Next steps: blocked account, health insurance, and the embassy appointment. A relocation service or immigration adviser can bundle these and avoid the common document rejections. [Affiliate link: Germany relocation / blocked account]",
+      aff_fail_t: "Not at 6 points yet — but the gap may be closable",
+      aff_fail_b: "A German A2 certificate (1–3 points) or a partial recognition procedure (4 points) are the fastest levers. An adviser can map your quickest route. [Affiliate link: German course / recognition service]",
+      notes_t: "Before you rely on this result",
+      note1: "You must also prove funds of about €1,091/month (≈ €13,092/year), usually via a blocked account, or a part-time job contract (max 20 hrs/week).",
+      note2: "Language certificates must come from approved providers (e.g. Goethe, telc, TestDaF for German; IELTS/TOEFL for English).",
+      note3: "The card allows up to 12 months of job search, 20 hrs/week part-time work, and 2-week trial jobs — but no freelancing.",
+      note4: "Applicants over 45 taking up work later face an additional income/pension requirement."
+    },
+    de: {
+      badge: "Offizielles 6-Punkte-System", title: "Chancenkarte Punkterechner",
+      subtitle: "Prüfen Sie, ob Sie die 6 Punkte für die Chancenkarte erreichen — oder direkt ohne Punkte qualifiziert sind.",
+      q1: "Ist Ihr Abschluss in Deutschland voll anerkannt (oder in Deutschland erworben)?",
+      q1_full: "Ja — voll anerkannt", q1_partial: "Teilweise anerkannt", q1_no: "Nein / nicht geprüft",
+      q1_hint: "Voll anerkannt = Sie qualifizieren sich direkt als Fachkraft, ohne Punktesystem. Prüfung über die \"Anabin\"-Datenbank oder ein Anerkennungsverfahren.",
+      q2: "Grundvoraussetzungen — haben Sie BEIDES: ① mind. 2-jährige Berufsausbildung oder Hochschulabschluss (im Herkunftsland anerkannt) und ② Deutsch A1 oder Englisch B2?",
+      q2_hint: "Dies sind Grundvoraussetzungen ohne Punkte. Ohne beides ist der Punkteweg verschlossen.",
+      q3: "Berufserfahrung passend zur Qualifikation",
+      exp0: "Weniger als 2 Jahre", exp2: "2+ Jahre in den letzten 5 Jahren", exp3: "3+ Jahre in den letzten 7 Jahren",
+      q4: "Sprachkenntnisse", q4_de: "Deutschniveau", q4_en: "Englisch C1 oder Muttersprache?", de_none: "Keine oder A1", de_b2: "B2 oder höher",
+      q4_hint: "Englisch B2 erfüllt die Grundvoraussetzung, bringt aber 0 Punkte — Punkte gibt es ab C1.",
+      q5: "Ihr Alter", age35: "35 oder jünger", age40: "36 – 40", age41: "41 oder älter",
+      q6: "Bonuspunkte", q6_stay: "6+ Monate rechtmäßig in Deutschland (letzte 5 Jahre, kein Tourismus)?",
+      q6_shortage: "Qualifikation in einem Engpassberuf?", q6_spouse: "Gemeinsame Antragstellung mit Ehepartner?",
+      yes: "Ja", no: "Nein",
+      result_label: "Ihr Chancenkarte-Check", breakdown: "Punkteübersicht",
+      r_direct: "Qualifiziert — Fachkräfteweg", r_pass: "Qualifiziert — {p} / 6 Punkte", r_fail: "Noch nicht — {p} / 6 Punkte", r_nobasic: "Grundvoraussetzungen nicht erfüllt",
+      r_direct_sub: "Ihr Abschluss ist voll anerkannt — das Punktesystem entfällt. Sie benötigen nur den Finanzierungsnachweis (≈ 1.091 €/Monat) und eine Krankenversicherung.",
+      r_pass_sub: "Sie erreichen die 6-Punkte-Schwelle. Nächste Schritte: Finanzierungsnachweis (≈ 13.092 €/Jahr, Sperrkonto oder Teilzeitvertrag), Krankenversicherung, Botschaftstermin.",
+      r_fail_sub: "Es fehlen noch {n} Punkt(e). Schnellste Hebel: Deutsch A2–B2 (1–3 Punkte), Teilanerkennung (4 Punkte) oder Nachweis weiterer Berufserfahrung.",
+      r_nobasic_sub: "Der Punkteweg erfordert ① eine 2-jährige Berufsausbildung oder einen Hochschulabschluss (im Herkunftsland anerkannt) UND ② Deutsch A1 oder Englisch B2.",
+      b_recog: "Teilanerkennung", b_exp: "Berufserfahrung", b_de: "Deutsch", b_en: "Englisch C1+", b_age: "Alter", b_stay: "Voraufenthalt", b_short: "Engpassberuf", b_spouse: "Ehepartner", b_total: "Gesamt",
+      aff_pass_t: "Sie scheinen qualifiziert zu sein",
+      aff_pass_b: "Nächste Schritte: Sperrkonto, Krankenversicherung, Botschaftstermin. Ein Relocation-Service kann diese bündeln und typische Ablehnungsgründe vermeiden. [Affiliate link]",
+      aff_fail_t: "Noch keine 6 Punkte — die Lücke ist oft schließbar",
+      aff_fail_b: "Ein Deutsch-A2-Zertifikat (1–3 Punkte) oder ein Teilanerkennungsverfahren (4 Punkte) sind die schnellsten Hebel. [Affiliate link]",
+      notes_t: "Bevor Sie sich auf dieses Ergebnis verlassen",
+      note1: "Zusätzlich ist ein Finanzierungsnachweis von ca. 1.091 €/Monat (≈ 13.092 €/Jahr) nötig — meist per Sperrkonto oder Teilzeitvertrag (max. 20 Std./Woche).",
+      note2: "Sprachzertifikate müssen von anerkannten Anbietern stammen (z. B. Goethe, telc, TestDaF; IELTS/TOEFL für Englisch).",
+      note3: "Die Karte erlaubt bis zu 12 Monate Jobsuche, 20 Std./Woche Teilzeit und 2-wöchige Probearbeit — keine Selbstständigkeit.",
+      note4: "Bewerber über 45 müssen bei späterer Arbeitsaufnahme zusätzliche Einkommens-/Rentenanforderungen erfüllen."
+    }
+  };
+  /* I18N_END */
+
+  let LANG = 'en';
+  const NOW_YEAR = new Date().getFullYear();
+  document.getElementById('badgeYear').textContent = NOW_YEAR;
+  document.getElementById('footerYear').textContent = NOW_YEAR;
+
+  function applyLang() {
+    const t = I18N[LANG];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const k = el.getAttribute('data-i18n');
+      if (t[k]) el.textContent = t[k];
+    });
+    document.documentElement.lang = LANG;
+    calculate();
+  }
+  document.getElementById('langToggle').querySelectorAll('button').forEach(b => {
+    b.addEventListener('click', () => {
+      document.getElementById('langToggle').querySelectorAll('button').forEach(x=>x.classList.remove('on'));
+      b.classList.add('on');
+      LANG = b.dataset.lang;
+      applyLang();
+    });
+  });
+
+  const state = { recog: 'no', basic: 'no' };
+  function bindSeg(id, key) {
+    document.getElementById(id).querySelectorAll('button').forEach(b => {
+      b.addEventListener('click', () => {
+        document.getElementById(id).querySelectorAll('button').forEach(x=>x.classList.remove('on'));
+        b.classList.add('on');
+        state[key] = b.dataset.v;
+        calculate();
+      });
+    });
+  }
+  bindSeg('recogSeg','recog');
+  bindSeg('basicSeg','basic');
+  ['exp','german','english','age','stay','shortage','spouse'].forEach(id =>
+    document.getElementById(id).addEventListener('change', calculate));
+
+  function calculate() {
+    const cfg = POLICY_CONFIG;
+    const t = I18N[LANG];
+    const resultCard = document.getElementById('resultCard');
+    const infoCard = document.getElementById('infoCard');
+    const affPass = document.getElementById('affPass');
+    const affFail = document.getElementById('affFail');
+
+    // Route 1: 완전 인정 → 점수 불필요
+    if (state.recog === 'full') {
+      resultCard.style.opacity = '1';
+      resultCard.className = resultCard.className.replace(/result-(pass|direct|fail)/g,'').trim() + ' result-direct';
+      document.getElementById('resultStatus').textContent = t.r_direct;
+      document.getElementById('resultSub').textContent = t.r_direct_sub;
+      infoCard.classList.add('hidden');
+      affPass.classList.remove('hidden');
+      affFail.classList.add('hidden');
+      fireGA('direct', 99);
+      return;
+    }
+
+    // Route 2: 기본요건 미충족 → 점수 무의미
+    if (state.basic !== 'yes') {
+      resultCard.style.opacity = '1';
+      resultCard.className = resultCard.className.replace(/result-(pass|direct|fail)/g,'').trim() + ' result-fail';
+      document.getElementById('resultStatus').textContent = t.r_nobasic;
+      document.getElementById('resultSub').textContent = t.r_nobasic_sub;
+      infoCard.classList.add('hidden');
+      affPass.classList.add('hidden');
+      affFail.classList.remove('hidden');
+      fireGA('no_basic', 0);
+      return;
+    }
+
+    // 점수 계산
+    const v = id => document.getElementById(id).value;
+    const items = [
+      [t.b_recog, state.recog === 'partial' ? cfg.partialRecognition : 0],
+      [t.b_exp, cfg.experience[v('exp')]],
+      [t.b_de, cfg.german[v('german')]],
+      [t.b_en, v('english') === '1' ? cfg.englishC1 : 0],
+      [t.b_age, cfg.age[v('age')]],
+      [t.b_stay, v('stay') === '1' ? cfg.stay : 0],
+      [t.b_short, v('shortage') === '1' ? cfg.shortageOccupation : 0],
+      [t.b_spouse, v('spouse') === '1' ? cfg.spouse : 0],
+    ];
+    const total = items.reduce((s, [,p]) => s + p, 0);
+    const pass = total >= cfg.pointsRequired;
+
+    resultCard.style.opacity = '1';
+    resultCard.className = resultCard.className.replace(/result-(pass|direct|fail)/g,'').trim()
+      + ' ' + (pass ? 'result-pass' : 'result-fail');
+    document.getElementById('resultStatus').textContent =
+      (pass ? t.r_pass : t.r_fail).replace('{p}', total);
+    document.getElementById('resultSub').textContent =
+      pass ? t.r_pass_sub : t.r_fail_sub.replace('{n}', cfg.pointsRequired - total);
+
+    infoCard.classList.remove('hidden');
+    const row = (label, p) => `
+      <div class="flex justify-between py-1.5 border-b border-slate-50">
+        <span class="text-slate-500">${label}</span>
+        <span class="font-medium ${p > 0 ? 'text-amber-700' : 'text-slate-400'}">${p} pt</span>
+      </div>`;
+    document.getElementById('infoBody').innerHTML =
+      items.map(([l,p]) => row(l,p)).join('')
+      + `<div class="flex justify-between py-2 mt-1 ${pass ? 'bg-amber-50' : 'bg-stone-100'} rounded-lg px-3">
+          <span class="${pass ? 'text-amber-800' : 'text-stone-600'} font-semibold">${t.b_total}</span>
+          <span class="font-bold ${pass ? 'text-amber-800' : 'text-stone-600'}">${total} / ${cfg.pointsRequired}</span>
+        </div>`;
+
+    affPass.classList.toggle('hidden', !pass);
+    affFail.classList.toggle('hidden', pass);
+    fireGA(pass ? 'eligible' : 'not_yet', total);
+  }
+
+  function fireGA(result, pts) {
+    if (typeof gtag === 'function') {
+      clearTimeout(window._gaTimer);
+      window._gaTimer = setTimeout(() => {
+        gtag('event', 'calc_done', { result: result, points: pts, lang: LANG });
+      }, 1500);
+    }
+  }
+
+  function toggleFeedback(){ document.getElementById('feedbackPanel').classList.toggle('open'); }
+  async function submitFeedback(){
+    const type=document.getElementById('fbType').value, text=document.getElementById('fbText').value.trim(), email=document.getElementById('fbEmail').value.trim();
+    const btn=document.getElementById('fbSubmitBtn'); btn.disabled=true; btn.textContent='Sending...';
+    try {
+      const res = await fetch("https://api.web3forms.com/submit",{method:"POST",headers:{"Content-Type":"application/json"},
+        body: JSON.stringify({access_key:"00f488d8-a296-4b0e-bfa6-a5eacdc5d5e6",subject:`[Chancenkarte Calc] ${type}`,from_name:"Chancenkarte Calculator",email:email||"no-reply@feedback.local",message:`Type: ${type}\n\n${text||"(none)"}\n\nFrom: ${location.href}`})});
+      const data = await res.json();
+      if (data.success){ document.getElementById('fbSuccess').style.display='block'; btn.textContent='Sent'; }
+      else { btn.disabled=false; btn.textContent='Send'; alert("Sending failed. Please try again."); }
+    } catch(e){ btn.disabled=false; btn.textContent='Send'; alert("A network error occurred."); }
+  }
+  </script>
+</body>
+</html>

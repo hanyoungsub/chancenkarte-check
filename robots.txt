@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chancenkarte-check.pages.dev/sitemap.xml
