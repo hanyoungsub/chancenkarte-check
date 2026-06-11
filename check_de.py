@@ -19,8 +19,10 @@ HEADERS = {
     "Accept-Language": "en-DE,en;q=0.9,de;q=0.8",
 }
 
+# digital.diplo.de는 JS 렌더링이라 크롤링 불가 → 법령 원문으로 감시 (호주와 동일 패턴).
+# Chancenkarte 점수제의 법적 근거 = 체류법 §20a (개정 시 이 조문이 바뀜).
 SOURCES = [
-    ("DE_Chancenkarte_portal", "https://digital.diplo.de/chancenkarte"),
+    ("DE_AufenthG_20a", "https://www.gesetze-im-internet.de/aufenthg_2004/__20a.html"),
 ]
 
 
@@ -95,7 +97,7 @@ def main():
             failed.append(label)
 
     if not current:
-        send_telegram("[DE감시 에러] 독일 영사포털 접근 실패(직접+Wayback). 점검 필요.")
+        send_telegram("[DE감시 에러] 독일 법령 페이지 접근 실패(직접+Wayback). 점검 필요.")
         return
 
     if os.path.exists(HASH_FILE):
@@ -118,7 +120,7 @@ def main():
     if changed:
         send_telegram(
             "[⚠️DE 규칙 변경 감지] 독일 영사포털 페이지 변경: " + ", ".join(changed) + "\n"
-            "점수표/재정요건 변경 가능성. 클로드와 내용 확인 후 계산기 수정 여부 판단.\n"
+            "체류법 §20a 개정 가능성. 클로드와 내용 확인 후 계산기 수정 여부 판단.\n"
             "사이트: chancenkarte-check.pages.dev"
         )
         with open(HASH_FILE, "w", encoding="utf-8") as f:
