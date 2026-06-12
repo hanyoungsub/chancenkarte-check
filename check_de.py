@@ -1,7 +1,6 @@
 """
-독일 Chancenkarte(+추후 블루카드) 규칙 변경 감시 (월 1회: 매월 20일)
-점수표는 안정적이나 재정요건(월 금액)이 연 단위 갱신됨.
-8번 블루카드 작업 시 SOURCES에 블루카드 공식 페이지 추가 예정.
+독일 Chancenkarte(§20a) + EU 블루카드(§18g) 규칙 변경 감시 (월 1회: 매월 20일)
+블루카드 연봉 하한은 매년 1월 갱신(연금 기여상한 연동)이라 감시 필수.
 """
 import os
 import json
@@ -23,6 +22,7 @@ HEADERS = {
 # Chancenkarte 점수제의 법적 근거 = 체류법 §20a (개정 시 이 조문이 바뀜).
 SOURCES = [
     ("DE_AufenthG_20a", "https://www.gesetze-im-internet.de/aufenthg_2004/__20a.html"),
+    ("DE_AufenthG_18g_BlueCard", "https://www.gesetze-im-internet.de/aufenthg_2004/__18g.html"),
 ]
 
 
@@ -130,7 +130,7 @@ def main():
         send_telegram(
             "[⚠️DE 규칙 변경 감지] 독일 영사포털 페이지 변경: " + ", ".join(changed) + "\n"
             "체류법 §20a 개정 가능성. 클로드와 내용 확인 후 계산기 수정 여부 판단.\n"
-            "사이트: chancenkarte-check.pages.dev"
+            "사이트: chancenkarte-check.pages.dev / bluecard-check.pages.dev"
         )
         with open(HASH_FILE, "w", encoding="utf-8") as f:
             json.dump(current, f, indent=2)
