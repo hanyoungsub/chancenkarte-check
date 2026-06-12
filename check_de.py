@@ -100,7 +100,7 @@ def main():
             failed.append(label)
 
     if not current:
-        send_telegram("[DE감시 에러] 독일 법령 페이지 접근 실패(직접+Wayback). 점검 필요.")
+        send_telegram("[DE감시 에러] 독일 법령 페이지 접근 실패(직접+Wayback). 점검 필요. ▶chancenkarte-check.pages.dev / bluecard-check.pages.dev")
         return
 
     if os.path.exists(HASH_FILE):
@@ -138,7 +138,7 @@ def main():
         with open(HASH_FILE, "w", encoding="utf-8") as f:
             json.dump(current, f, indent=2)
     else:
-        msg = "[DE감시 정상] 월간 점검 완료. 규칙 변경 없음."
+        msg = "[DE감시 정상] 월간 점검 완료. 규칙 변경 없음. ▶chancenkarte-check.pages.dev / bluecard-check.pages.dev"
         if failed:
             msg += f" ⚠수집 실패: {', '.join(failed)} (다음 회차 재시도)"
         send_telegram(msg)
