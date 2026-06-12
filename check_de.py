@@ -116,6 +116,15 @@ def main():
         return
 
     changed = [k for k in current if saved.get(k) and saved[k] != current[k]]
+    new_keys = [k for k in current if k not in saved]
+
+    # 신규 감시 소스 추가 시: 기준 지문 저장 + 알림 (저장 안 하면 영구 감지 불가 버그)
+    if new_keys and not changed:
+        saved.update({k: current[k] for k in new_keys})
+        with open(HASH_FILE, "w", encoding="utf-8") as f:
+            json.dump(saved, f, indent=2)
+        send_telegram(f"[DE감시 소스 추가] 신규 감시 시작: {', '.join(new_keys)}. 기존 소스 변경 없음.")
+        return
 
     if changed:
         send_telegram(
