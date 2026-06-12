@@ -87,9 +87,12 @@ def fetch_fingerprint(url, label):
 
 
 def main():
+    import time
     current = {}
     failed = []
-    for label, url in SOURCES:
+    for i, (label, url) in enumerate(SOURCES):
+        if i > 0:
+            time.sleep(60)  # archive.org 연속요청 차단 회피
         h = fetch_fingerprint(url, label)
         if h:
             current[label] = h
@@ -135,7 +138,10 @@ def main():
         with open(HASH_FILE, "w", encoding="utf-8") as f:
             json.dump(current, f, indent=2)
     else:
-        send_telegram("[DE감시 정상] 월간 점검 완료. Chancenkarte 규칙 변경 없음.")
+        msg = "[DE감시 정상] 월간 점검 완료. 규칙 변경 없음."
+        if failed:
+            msg += f" ⚠수집 실패: {', '.join(failed)} (다음 회차 재시도)"
+        send_telegram(msg)
 
 
 if __name__ == "__main__":
